@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-canvas text-body font-body;
+  }
+}
+
+@layer components {
+  .card-featured {
+    clip-path: polygon(
+      0 12px, 12px 12px, 12px 0,
+      calc(100% - 12px) 0, calc(100% - 12px) 12px, 100% 12px,
+      100% calc(100% - 12px), calc(100% - 12px) calc(100% - 12px), calc(100% - 12px) 100%,
+      12px 100%, 12px calc(100% - 12px), 0 calc(100% - 12px)
+    );
+    background: var(--gradient-brand, linear-gradient(135deg, #2F6FFB 0%, #1FA35C 100%));
+    padding: 3px;
+  }
+  .card-featured > .card-featured__inner {
+    clip-path: inherit;
+    background: var(--color-canvas, #FFFFFF);
+    padding: var(--space-xl, 32px);
+  }
+}

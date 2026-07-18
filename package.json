@@ -1,0 +1,12 @@
+{
+  "name": "portofolio-web",
+  "version": "1.0.0",
+  "description": "Portofolio Web",
+  "scripts": {
+    "dev": "tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/output.css --watch",
+    "build": "tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/output.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
